@@ -1,0 +1,5 @@
+pane	setup	1	1	:*	1	benborla@Bens-MacBook-Pro:~/projects/mcp/mcp-server-mysql	:/Users/benborla/projects/mcp/mcp-server-mysql	1	zsh	:
+pane	setup	2	0	:-	1	benborla@Bens-MacBook-Pro:~	:/Users/benborla	1	zsh	:
+window	setup	1	:zsh mcp-server-mysql	1	:*	bfbe,177x44,0,0,1	:
+window	setup	2	:zsh benborla	0	:-	bfbf,177x44,0,0,2	:
+state	setup	

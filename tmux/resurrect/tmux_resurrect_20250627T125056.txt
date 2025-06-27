@@ -1,0 +1,5 @@
+pane	setup	1	0	:-	1	benborla@Bens-MacBook-Pro:~/.config/tmux/plugins	:/Users/benborla/.config/tmux/plugins	1	zsh	:zsh
+pane	setup	2	1	:*	1	nvim	:/Users/benborla/.config/nvim	1	nvim	:nvim
+window	setup	1	:zsh plugins	0	:-	bbbf,177x43,0,0,2	:
+window	setup	2	:nvim nvim	1	:*	bbc0,177x43,0,0,3	:
+state	setup	

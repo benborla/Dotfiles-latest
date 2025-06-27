@@ -1,0 +1,8 @@
+pane	setup	1	0	:	1	benborla@Bens-MacBook-Pro:~/.config/tmux/plugins	:/Users/benborla/.config/tmux/plugins	1	zsh	:zsh
+pane	setup	2	0	:-	1	nvim	:/Users/benborla/.config/nvim	1	nvim	:nvim
+pane	setup	2	0	:-	2	benborla@Bens-MacBook-Pro:~/projects/mcp/mcp-server-mysql	:/Users/benborla/projects/mcp/mcp-server-mysql	0	zsh	:
+pane	setup	3	1	:*	1	nvim ~/.config/tmux/tmux.conf	:/Users/benborla/projects/mcp/mcp-server-mysql	1	nvim	:nvim
+window	setup	1	:zsh plugins	0	:	bbbf,177x43,0,0,2	:
+window	setup	2	:code	0	:-	e37d,177x43,0,0{88x43,0,0,3,88x43,89,0,23}	off
+window	setup	3	:test	1	:*	5e0f,177x43,0,0,10	off
+state	setup	

@@ -1,0 +1,8 @@
+# Alias
+alias ls="eza --long --ignore-glob="{vendor,node_modules,target,.git,dist,build}" --all --level=1 --tree"
+alias zz="zsh"
+alias zzc="nvim ~/.config/zsh_config"
+
+plugins=(git vi-mode)
+
+

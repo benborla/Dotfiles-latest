@@ -1,0 +1,3 @@
+pane	setup	1	1	:*	1	nvim	:/Users/benborla/projects/mcp/mcp-server-mysql	1	nvim	:nvim
+window	setup	1	:nvim mcp-server-mysql	1	:*	bfbe,177x44,0,0,1	:
+state	setup	

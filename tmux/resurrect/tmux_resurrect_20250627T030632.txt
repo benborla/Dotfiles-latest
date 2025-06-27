@@ -1,0 +1,7 @@
+pane	setup	1	1	:*	1	nvim ~/.config/tmux/tmux.conf	:/Users/benborla/projects/mcp/mcp-server-mysql	1	nvim	:nvim /Users/benborla/.config/tmux/tmux.conf
+pane	setup	2	0	:-	1	benborla@Bens-MacBook-Pro:~	:/Users/benborla	1	zsh	:
+pane	setup	3	0	:	1	benborla@Bens-MacBook-Pro:~	:/Users/benborla	1	zsh	:
+window	setup	1	:nvim mcp-server-mysql	1	:*	bfbe,177x44,0,0,1	:
+window	setup	2	:zsh benborla	0	:-	bfbf,177x44,0,0,2	:
+window	setup	3	:zsh benborla	0	:	bfc0,177x44,0,0,3	:
+state	setup	

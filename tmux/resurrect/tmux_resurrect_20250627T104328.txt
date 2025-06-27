@@ -1,0 +1,7 @@
+pane	setup	1	1	:*	1	master_ujyzbdhtav@1477677: /home/1477677.cloudwaysapps.com/pcvrkbatcc/public_html	:/Users/benborla/projects/mcp/mcp-server-mysql	1	ssh	:ssh master_ujyzbdhtav@134.199.145.105
+pane	setup	2	0	:-	1	benborla@Bens-MacBook-Pro:~/.config/tmux/plugins	:/Users/benborla/.config/tmux/plugins	1	zsh	:zsh
+pane	setup	3	0	:	1	benborla@Bens-MacBook-Pro:~	:/Users/benborla	1	zsh	:
+window	setup	1	:ssh mcp-server-mysql	1	:*	d11e,205x68,0,0,1	:
+window	setup	2	:zsh plugins	0	:-	bfbf,177x44,0,0,2	:
+window	setup	3	:zsh benborla	0	:	bfc0,177x44,0,0,3	:
+state	setup	
