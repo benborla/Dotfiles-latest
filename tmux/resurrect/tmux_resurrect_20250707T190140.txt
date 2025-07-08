@@ -1,0 +1,29 @@
+pane	bts	1	1	:*	1	nvim ~/.config/tmux/tmux.conf	:/Users/atlasborla	1	nvim	:nvim /Users/atlasborla/.config/tmux/tmux.conf
+pane	bts	2	0	:-	1	atlasborla@Atlas-Mac-Mini:~	:/Users/atlasborla	1	zsh	:
+pane	bts	3	0	:	1	atlasborla@Atlas-Mac-Mini:~	:/Users/atlasborla	1	zsh	:
+pane	edx	1	1	:*	1	atlasborla@Atlas-Mac-Mini:~/projects/electron/edexams-streaming-app	:/Users/atlasborla/Projects/electron/edexams-streaming-app	1	zsh	:
+pane	edx	2	0	:-	1	atlasborla@Atlas-Mac-Mini:~/projects/electron/edexams-streaming-app	:/Users/atlasborla/Projects/electron/edexams-streaming-app	1	zsh	:zsh
+pane	edx	2	0	:-	2	atlasborla@Atlas-Mac-Mini:~/Projects/electron/edexams-streaming-app	:/Users/atlasborla/Projects/electron/edexams-streaming-app	0	zsh	:
+pane	edx	3	0	:	1	atlasborla@Atlas-Mac-Mini:~/Library/Application Support/edexams-streaming	:/Users/atlasborla/Library/Application\ Support/edexams-streaming	1	zsh	:
+pane	edx	4	0	:	1	atlasborla@Atlas-Mac-Mini:~/Projects/electron/edexams-streaming-app/node_modules/electron/dist/Electron.app/Contents/Resources	:/Users/atlasborla/Projects/electron/edexams-streaming-app/node_modules/electron/dist/Electron.app/Contents/Resources	1	zsh	:
+pane	saas	1	0	:-	1	pnpm dev:ios	:/Users/atlasborla/Projects/saas/productivity-app	0	node	:node /opt/homebrew/bin/pnpm dev:ios
+pane	saas	1	0	:-	2	atlasborla@Atlas-Mac-Mini:~/projects/saas/productivity-app	:/Users/atlasborla/Projects/saas/productivity-app	1	zsh	:
+pane	saas	1	0	:-	3	pnpm dev	:/Users/atlasborla/Projects/saas/productivity-app	0	node	:node /opt/homebrew/bin/pnpm dev
+pane	saas	2	1	:*	1	atlasborla@Atlas-Mac-Mini:~/projects/saas/fitness-for-dummies	:/Users/atlasborla/Projects/saas/fitness-for-dummies	1	zsh	:
+pane	setup	1	0	:	1	atlasborla@Atlas-Mac-Mini:~	:/Users/atlasborla	1	zsh	:
+pane	setup	2	0	:-	1	nvim	:/Users/atlasborla	1	nvim	:nvim
+pane	setup	2	0	:-	2	atlasborla@Atlas-Mac-Mini:~	:/Users/atlasborla	0	zsh	:
+pane	setup	3	1	:*	1	nvim	:/Users/atlasborla	1	nvim	:nvim
+window	bts	1	:nvim atlasborla	1	:*	6488,208x75,0,0,38	:
+window	bts	2	:zsh atlasborla	0	:-	6489,208x75,0,0,39	:
+window	bts	3	:zsh atlasborla	0	:	e480,208x75,0,0,40	:
+window	edx	1	:zsh edexams-streaming-app	1	:*	c89d,284x75,0,0,0	:
+window	edx	2	:zsh edexams-streaming-app	0	:-	ab3d,284x75,0,0[284x37,0,0,6,284x37,0,38,17]	:
+window	edx	3	:zsh edexams-streaming	0	:	e487,284x75,0,0,28	:
+window	edx	4	:zsh Resources	0	:	e488,284x75,0,0,29	:
+window	saas	1	:zsh productivity-app	0	:-	f021,206x55,0,0{103x55,0,0[103x27,0,0,30,103x27,0,28,36],102x55,104,0,35}	:
+window	saas	2	:zsh fitness-for-dummies	1	:*	6207,206x55,0,0,37	:
+window	setup	1	:zsh atlasborla	0	:	c71e,224x75,0,0,1	:
+window	setup	2	:code	0	:-	100a,224x75,0,0{112x75,0,0,2,111x75,113,0,3}	off
+window	setup	3	:test	1	:*	c721,224x75,0,0,4	off
+state	bts	

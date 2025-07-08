@@ -82,3 +82,15 @@ keymap.set("n", "<D-p>", function()
     hidden = true,
   })
 end, { desc = "File Explorer" })
+
+vim.keymap.set("n", "<leader>ar", ToggleAutoRefresh, {
+  noremap = true,
+  silent = false,
+  desc = "Toggle auto refresh of files",
+})
+
+vim.keymap.set("n", "<leader>as", AutoRefreshStatus, {
+  noremap = true,
+  silent = false,
+  desc = "Auto Refresh Status",
+})
