@@ -1,0 +1,121 @@
+alias zz="zsh"
+alias zzc="nvim ~/.zshrc"
+# Reload Kitty Instance
+kitty_restart() {
+    local pid=$(pgrep -f kitty)
+    if [ -n "$pid" ]; then
+        kill -SIGUSR1 $pid
+        echo "Kitty configuration reloaded."
+    else
+        echo "No Kitty process found."
+    fi
+}
+
+alias benborla="nvim ~/.zsh_alias.sh"
+# alias npm="pnpm"
+
+### -- Zoxide -- 
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+### -- FastFetch (NeoFetch alt)
+alias neofetch="fastfetch"
+
+### -- EZA -- 
+# alias ls="eza --all -l -o --color-scale-mode=gradient"
+alias ls='eza --long --ignore-glob="{vendor,node_modules,target,.git,dist,build}" --level=1 --tree --color-scale-mode=gradient'
+
+### -- BAT --
+alias cat="bat --style=plain --theme=gruvbox-dark"
+
+### -- Cargo --
+# Cargo with backtrace
+alias bcargo="RUST_BACKTRACE=1 cargo"
+alias lcargo="RUST_LOG=info cargo"
+
+### -- TLDR --
+alias man="tldr"
+alias npm_intel="export npm_config_arch=x64 && export npm_config_target_arch=x64"
+
+### -- FZF --
+fg="#CBE0F0"
+bg="#011628"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+
+# source "/opt/homebrew/Cellar/fzf/0.55.0/shell/completion.zsh"
+# source "/opt/homebrew/Cellar/fzf/0.55.0/shell/key-bindings.zsh"
+eval "$(fzf --zsh)"
+
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
+# -- Use fd instead of fzf --
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+  cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+  export | unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
+  ssh) fzf --preview 'dig {}' "$@" ;;
+  *) fzf --preview "bat -n --color=alwaysasdfjaslkdjfas;dlkf
+      s --line-range :500 {}" "$@" ;;
+  esac
+}
+
+
+search() {
+ if [ -z "$1" ]; then
+   echo "Usage: search <search_term> <path>"
+   return 1
+ fi
+
+ local keyword="$1"
+ local path="${2:-.}"
+
+ /usr/bin/grep -Hrn "$keyword" "$path" \
+   --exclude-dir={node_modules,.cache,public,.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv} \
+   --color=auto \
+   --exclude="*.log" \
+   --exclude="*.tmp" \
+   | while IFS=: read -r file line content; do
+     printf "nvim %s +%s\n" "$file" "$line"
+     echo "$content" | GREP_COLOR='30;43' /usr/bin/grep --color=always "$keyword"
+     echo
+   done
+}
+
+
+### -- Kitty --
+alias kitty_config="nvim ~/.config/kitty/kitty.conf"
+alias projects="cd ~/Projects"
+alias brewclean='brew update && brew upgrade && brew cleanup --prune=all && brew autoremove && brew doctor'
+alias docker_ps="python3 $HOME/Projects/python/docker-grid/docker-grid.py"
+alias treepy="python3 $HOME/Projects/python/tree/pytree.py"
+alias draw="cd $HOME/Projects/react/excalidraw && yarn start"
+alias mcp="nvim '/Users/atlasborla/Library/Application Support/Claude/claude_desktop_config.json'"
